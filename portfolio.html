@@ -1,34 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Karya Saya</title>
-
+    <title>Portfolio - Proyek Saya</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Portfolio</a>
+        <a class="navbar-brand" href="index.html"
+          >Portfolio<span class="text-accent">.</span></a
+        >
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,154 +47,169 @@
       </div>
     </nav>
 
-    <header class="jumbotron">
+    <header class="jumbotron animate-on-scroll">
       <div class="container text-center">
-        <h1 class="custom-display-4">PORTFOLIO KARYA</h1>
-        <p class="custom-lead">
-          Berikut ini adalah proyek-proyek yang telah dan akan saya kerjakan.
+        <h1 class="custom-display-4">
+          PORTOFOLIO <span class="text-gradient">KARYA</span>
+        </h1>
+        <p class="custom-lead text-muted-custom">
+          Kumpulan proyek yang telah saya kerjakan.
         </p>
       </div>
     </header>
 
-    <section id="portfolio-karya" class="py-5">
+    <section id="portfolio-list" class="py-5">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
-            <div class="card h-100 shadow-sm project-card">
+        <div class="row g-4 justify-content-center animate-on-scroll">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 portfolio-item">
               <img
                 src="img/Screenshot 2025-07-31 231904.png"
                 class="card-img-top"
                 alt="Aplikasi Perpustakaan"
-                style="height: 200px; object-fit: cover"
+                style="height: 220px; object-fit: cover"
               />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Aplikasi Perpustakaan</h5>
-                <p class="card-text">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Aplikasi Perpustakaan</h5>
+                <p class="card-text text-muted-custom">
                   Aplikasi sederhana untuk perpustakaan, melihat daftar buku dan
                   harga, serta mencetak struk.
                 </p>
-                <p class="card-text">
-                  <small class="text-muted"
-                    ><strong>Bahasa:</strong> Java</small
-                  >
-                </p>
-                <div class="mt-auto pt-3">
-                  <a
-                    href="https://github.com/Ndii21/UAS-PBO-KELOMPOK-3-2025"
-                    class="btn btn-primary btn-sm"
-                    target="_blank"
-                    >Detail</a
-                  >
-                  <a href="index.html" class="btn btn-outline-secondary btn-sm"
-                    >Demo</a
+                <div class="mt-3">
+                  <span
+                    class="badge bg-primary bg-opacity-25 border border-primary"
+                    >Java</span
                   >
                 </div>
+              </div>
+              <div class="card-footer bg-transparent border-top-0 pb-4">
+                <a
+                  href="https://github.com/Ndii21/UAS-PBO-KELOMPOK-3-2025"
+                  target="_blank"
+                  class="btn btn-primary w-100 btn-sm"
+                  >Detail</a
+                >
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
-            <div class="card h-100 shadow-sm project-card">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 portfolio-item">
               <img
-                src="img/Screenshot 2025-05-28 115013.png  "
+                src="img/Screenshot 2025-05-28 115013.png"
                 class="card-img-top"
-                alt="Project Web Booking Gedung"
-                style="height: 200px; object-fit: cover"
+                alt="Booking Gedung"
+                style="height: 220px; object-fit: cover"
               />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Website Booking Gedung Opon</h5>
-                <p class="card-text">
-                  Sebuah platform untuk melakukan pemesanan dan penyewaan gedung
-                  secara online dengan mudah dan cepat.
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Web Booking Gedung</h5>
+                <p class="card-text text-muted-custom">
+                  Platform untuk pemesanan dan penyewaan gedung secara online
+                  dengan mudah.
                 </p>
-                <p class="card-text">
-                  <small class="text-muted"
-                    ><strong>Teknologi:</strong> HTML, CSS, JavaScript,
-                    PHP</small
+                <div class="mt-3">
+                  <span
+                    class="badge bg-info bg-opacity-25 border border-info me-1"
+                    >HTML</span
                   >
-                </p>
-                <div class="mt-auto pt-3">
-                  <a
-                    href="https://github.com/Aditjr788/Project-RPL/tree/main/coba2"
-                    class="btn btn-primary btn-sm"
-                    target="_blank"
-                    >Detail</a
+                  <span
+                    class="badge bg-info bg-opacity-25 border border-info me-1"
+                    >PHP</span
                   >
-                  <a href="#" class="btn btn-outline-secondary btn-sm">Demo</a>
+                  <span class="badge bg-info bg-opacity-25 border border-info"
+                    >MySQL</span
+                  >
                 </div>
+              </div>
+              <div class="card-footer bg-transparent border-top-0 pb-4">
+                <a
+                  href="https://github.com/Aditjr788/Project-RPL/tree/main/coba2"
+                  target="_blank"
+                  class="btn btn-primary w-100 btn-sm"
+                  >Detail</a
+                >
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
-            <div class="card h-100 shadow-sm project-card">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 portfolio-item">
               <img
                 src="img/Screenshot 2025-07-31 230904.png"
                 class="card-img-top"
-                alt="Project Portfolio Website"
-                style="height: 200px; object-fit: cover"
+                alt="Portfolio"
+                style="height: 220px; object-fit: cover"
               />
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Portfolio Berbasis Website</h5>
-                <p class="card-text">
-                  Website portofolio pribadi yang sedang Anda lihat saat ini,
-                  dibuat untuk menampilkan proyek dan keahlian.
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Portfolio Website</h5>
+                <p class="card-text text-muted-custom">
+                  Website portofolio pribadi yang interaktif untuk menampilkan
+                  karya dan skill.
                 </p>
-                <p class="card-text">
-                  <small class="text-muted"
-                    ><strong>Teknologi:</strong> Bootstrap, HTML, CSS</small
+                <div class="mt-3">
+                  <span
+                    class="badge bg-warning bg-opacity-25 border border-warning me-1"
+                    >Bootstrap</span
                   >
-                </p>
-                <div class="mt-auto pt-3">
-                  <a
-                    href="https://github.com/Aditjr788/Portfolio-Aditya"
-                    class="btn btn-primary btn-sm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Detail</a
-                  >
-                  <a
-                    href="beranda.html"
-                    class="btn btn-outline-secondary btn-sm"
-                    >Demo</a
+                  <span
+                    class="badge bg-warning bg-opacity-25 border border-warning"
+                    >CSS</span
                   >
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
-            <div class="card h-100 shadow-sm project-card project-mendatang">
-              <div
-                class="card-body text-center d-flex flex-column justify-content-center align-items-center"
-              >
-                <i class="fas fa-code fa-3x mb-3 text-muted"></i>
-                <h5 class="card-title">Proyek Selanjutnya</h5>
-                <p class="card-text text-muted">Update segera!</p>
+              <div class="card-footer bg-transparent border-top-0 pb-4">
+                <a
+                  href="https://github.com/Aditjr788/Portfolio-Aditya"
+                  target="_blank"
+                  class="btn btn-primary w-100 btn-sm"
+                  >Detail</a
+                >
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
-            <div class="card h-100 shadow-sm project-card project-mendatang">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 portfolio-item">
               <div
-                class="card-body text-center d-flex flex-column justify-content-center align-items-center"
+                class="card-body text-center d-flex flex-column justify-content-center align-items-center py-5"
               >
-                <i class="fas fa-code fa-3x mb-3 text-muted"></i>
-                <h5 class="card-title">Proyek Selanjutnya</h5>
-                <p class="card-text text-muted">Update segera!</p>
+                <div class="icon-box-accent mb-3">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h5 class="card-title fw-bold text-muted">
+                  Proyek Selanjutnya
+                </h5>
+                <p class="card-text text-muted-custom small">Segera Hadir</p>
               </div>
             </div>
           </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
-            <div class="card h-100 shadow-sm project-card project-mendatang">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 portfolio-item">
               <div
-                class="card-body text-center d-flex flex-column justify-content-center align-items-center"
+                class="card-body text-center d-flex flex-column justify-content-center align-items-center py-5"
               >
-                <i class="fas fa-code fa-3x mb-3 text-muted"></i>
-                <h5 class="card-title">Proyek Selanjutnya</h5>
-                <p class="card-text text-muted">Update segera!</p>
+                <div class="icon-box-accent mb-3">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h5 class="card-title fw-bold text-muted">
+                  Proyek Selanjutnya
+                </h5>
+                <p class="card-text text-muted-custom small">Segera Hadir</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 portfolio-item">
+              <div
+                class="card-body text-center d-flex flex-column justify-content-center align-items-center py-5"
+              >
+                <div class="icon-box-accent mb-3">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h5 class="card-title fw-bold text-muted">
+                  Proyek Selanjutnya
+                </h5>
+                <p class="card-text text-muted-custom small">Segera Hadir</p>
               </div>
             </div>
           </div>
@@ -206,34 +217,27 @@
       </div>
     </section>
 
-    <footer class="footer bg-dark text-light py-4">
+    <footer class="footer">
       <div class="container text-center">
-        <div class="social-icons mb-3">
-          <a
-            href="https://github.com/Aditjr788"
-            target="_blank"
-            class="text-light me-3"
-            ><i class="fab fa-github fa-2x"></i
+        <div class="social-icons mb-4">
+          <a href="https://github.com/Aditjr788" target="_blank"
+            ><i class="fab fa-github"></i
           ></a>
           <a
             href="https://www.linkedin.com/in/aditya-pratama-putra-b40611201"
             target="_blank"
-            class="text-light me-3"
-            ><i class="fab fa-linkedin fa-2x"></i
+            ><i class="fab fa-linkedin-in"></i
           ></a>
-          <a
-            href="https://www.instagram.com/adytptr_"
-            target="_blank"
-            class="text-light me-3"
-            ><i class="fab fa-instagram fa-2x"></i
+          <a href="https://www.instagram.com/adytptr_" target="_blank"
+            ><i class="fab fa-instagram"></i
           ></a>
-          <a href="mailto:aditjr788@gmail.com" class="text-light"
-            ><i class="fas fa-envelope fa-2x"></i
+          <a href="mailto:aditjr788@gmail.com"
+            ><i class="fas fa-envelope"></i
           ></a>
         </div>
-        <p class="mb-0">
+        <p class="mb-0 small text-muted-custom">
           &copy; <span id="currentYear"></span> Portfolio - Aditya Pratama
-          Putra. All Rights Reserved.
+          Putra.
         </p>
       </div>
     </footer>
