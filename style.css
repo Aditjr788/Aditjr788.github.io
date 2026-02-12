@@ -1,0 +1,321 @@
+/* Import Google Fonts - Plus Jakarta Sans */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  /* Palet Warna: Dark Futuristic Neon */
+  --bg-body: #0f172a; /* Dark Slate */
+  --bg-card: rgba(30, 41, 59, 0.7); /* Efek Kaca Gelap */
+  --bg-nav: rgba(15, 23, 42, 0.95);
+
+  --primary-gradient: linear-gradient(
+    135deg,
+    #6366f1 0%,
+    #a855f7 50%,
+    #ec4899 100%
+  );
+  --accent-color: #8b5cf6;
+
+  --text-main: #f8fafc; /* Putih Terang */
+  --text-muted: #cbd5e1; /* Abu-abu terang */
+
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.7;
+  color: var(--text-main);
+  padding-top: 76px;
+  background-color: var(--bg-body);
+  /* Pattern Background */
+  background-image:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(99, 102, 241, 0.1) 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(236, 72, 153, 0.1) 0%,
+      transparent 25%
+    );
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+.text-muted-custom {
+  color: var(--text-muted) !important;
+}
+
+/* --- Navbar --- */
+.navbar {
+  background-color: var(--bg-nav) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--text-main) !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-muted) !important;
+  margin: 0 5px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-main) !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Jumbotron / Hero --- */
+.jumbotron {
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+}
+
+/* Profile Image Neon Ring */
+.profile-img-container {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* PERBAIKAN DI SINI: Mengatur posisi gambar agar fokus ke bagian atas */
+  object-position: center 15%;
+  position: relative;
+  z-index: 2;
+  border: 4px solid var(--bg-body);
+}
+
+.profile-img-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 3px;
+  background: var(--primary-gradient);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-display-4 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+/* --- Cards --- */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s;
+  color: var(--text-main);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.3);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.section-title-hr {
+  border: none;
+  height: 4px;
+  background: var(--primary-gradient);
+  width: 80px;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+}
+
+/* Icons */
+.icon-box-accent {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+  transition: all 0.3s;
+}
+
+.card:hover .icon-box-accent {
+  background: var(--primary-gradient);
+  border-color: transparent;
+  transform: scale(1.1);
+}
+
+/* --- Buttons --- */
+.btn-primary {
+  background: var(--primary-gradient);
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 50px;
+  padding: 8px 25px;
+  transition: all 0.3s;
+}
+
+.btn-outline-dark:hover {
+  border-color: var(--accent-color);
+  background: rgba(139, 92, 246, 0.1);
+  color: white;
+}
+
+/* --- Progress Bar --- */
+.progress {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  height: 8px;
+}
+
+.progress-bar {
+  background: var(--primary-gradient);
+  border-radius: 10px;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: #020617;
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0;
+  margin-top: 5rem;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  color: var(--text-muted);
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  background: var(--primary-gradient);
+  color: white;
+  transform: translateY(-3px);
+  border-color: transparent;
+}
+
+/* --- Contact Item --- */
+.contact-item-wrapper {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.contact-item-wrapper:hover {
+  border-color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Animation */
+.animate-on-scroll {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Badge Fix */
+.badge {
+  color: #fff !important;
+}
